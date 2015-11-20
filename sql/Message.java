@@ -55,5 +55,55 @@ public class Message {
     public void setMsg_addr(String msg_addr) { this.msg_addr = msg_addr; }
     public void setMsg_plus(int msg_plus) { this.msg_plus = msg_plus; }
 
+    public int getMsg_id() { return this.msg_id; }
+    public int getObj_id() { return this.obj_id; }
+    public int getUser_id() { return this.user_id; }
+    public String getUser_name() { return this.user_name; }
+    public LocalDateTime getMsg_time() { return this.msg_time; }
+    public String getMsg_addr() { return this.msg_addr; }
+    public int getMsg_plus() { return msg_plus; }
 
+    @Override
+    public String toString() {
+        return "Message[msg_id=" + this.msg_id
+                + ",obj_id=" + this.obj_id
+                + ",user_id=" + this.user_id
+                + ",user_name=" + this.user_name
+                + ",msg_time=" + this.msg_time
+                + ",msg_addr=" + this.msg_addr
+                + ",msg_plus=" + this.msg_plus
+                + "]";
+    }
+
+    public boolean updateMessage(DB db) {
+        String sql = "update tb_msg set "
+                + "msg_id='" + this.msg_id
+                + "',obj_id='" + this.obj_id
+                + "',user_id='" + this.user_id
+                + "',user_name='" + this.user_name
+                + "',msg_time='" + this.msg_time
+                + "',msg_addr='" + this.msg_addr
+                + "',msg_plus='" + this.msg_plus
+                + "'";
+        return db.changeResultSet(sql);
+    }
+
+    public Message selectMessage(DB db) {
+        String sql = "select * from tb_msg where msg_id='"
+                + this.msg_id + "'";
+        ResultSet rs = db.getResultSet(sql);
+
+        try {
+            if(!rs.next()) return null;
+            this.setObj_id(Integer.parseInt(rs.getString(2)));
+            this.setUser_id(Integer.parseInt(rs.getString(3)));
+            this.setUser_name(rs.getString(4));
+            this.setMsg_time(LocalDateTime.parse(rs.getString(5)));
+            this.setMsg_addr(rs.getString(6));
+            this.setMsg_plus(Integer.parseInt(rs.getString(7)));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return this.
+    }
 }

@@ -55,7 +55,7 @@ public class UserAccount {
         return "UserAccount [user_id="+user_id+",user_username="+user_username+",user_password="+user_password+"]";
     }
 
-    public boolean reUserAccount(DB db){
+    public boolean updateUserAccount(DB db){
         String sql=null;
         sql="select * from tb_user where user_username='"+this.user_username+"'";
         ResultSet rs=db.getResultSet(sql);
@@ -70,33 +70,13 @@ public class UserAccount {
 
         sql="update tb_user set user_password='"+this.user_password+"'";
 
-        int res=db.changeResultSet(sql);
-        if(res==1)
-            return true;
-        return false;
+        return db.changeResultSet(sql);
     }
 
-    public UserAccount searUserAccount(DB db){
-        String sql=null;
-        sql="select * from tb_user where user_username='"+this.user_username+"'";
-        ResultSet rs=db.getResultSet(sql);
-
-        try {
-            if(!rs.next()) return null;
-            this.setUser_id(rs.getInt(1));
-            this.setUser_password(rs.getString(3));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return this;
-
-    }
-
-    public UserAccount searUserAccountById(DB db){
-        String sql=null;
-        sql="select * from tb_user where user_id='"+this.user_id+"'";
-        ResultSet rs=db.getResultSet(sql);
+    public UserAccount selectUserAccount(DB db){
+        String sql = "select * from tb_user where user_id='"
+                + this.user_id + "'";
+        ResultSet rs = db.getResultSet(sql);
 
         try {
             if(!rs.next()) return null;
@@ -105,22 +85,6 @@ public class UserAccount {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return this;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

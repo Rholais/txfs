@@ -90,7 +90,7 @@ public class UserMessage {
                 + "]";
     }
 
-    public boolean reUserMessage(DB db){
+    public boolean updateUserMessage(DB db){
         String sql = "update tb_userMsg set "
                 + "user_name='" + this.user_name
                 + "',user_sex='" + this.user_sex
@@ -100,4 +100,6 @@ public class UserMessage {
                 + "'";
         return db.changeResultSet(sql);
     }
+
+
 }
