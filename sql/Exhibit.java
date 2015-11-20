@@ -83,5 +83,19 @@ public class Exhibit {
         return db.changeResultSet(sql);
     }
 
-    
+    public Exhibit selectExhibit(DB db) {
+        String sql = "select * from tb_exb where exb_id='"
+                + this.exb_id + "'";
+        ResultSet rs = db.getResultSet(sql);
+
+        try {
+            if(!rs.next()) { return null; }
+            this.setExb_name(rs.getString(2));
+            this.setExb_imageaddr(rs.getString(3));
+            this.setExb_demo(rs.getString(4));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return this
+    }
 }

@@ -94,7 +94,7 @@ public class Message {
         ResultSet rs = db.getResultSet(sql);
 
         try {
-            if(!rs.next()) return null;
+            if(!rs.next()) { return null; }
             this.setObj_id(Integer.parseInt(rs.getString(2)));
             this.setUser_id(Integer.parseInt(rs.getString(3)));
             this.setUser_name(rs.getString(4));
@@ -104,6 +104,6 @@ public class Message {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return this.
+        return this
     }
 }

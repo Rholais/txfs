@@ -4,6 +4,7 @@
     <list default="true" id="bea3b214-5cbd-4d54-8595-45924fa50b51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/Exhibit.java" afterPath="$PROJECT_DIR$/sql/Exhibit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/Message.java" afterPath="$PROJECT_DIR$/sql/Message.java" />
     </list>
     <ignored path="txfs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +41,8 @@
           <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sql/Message.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.52513">
-                  <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.89081454">
+                  <caret line="106" column="19" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -53,21 +54,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="UserMessage.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="UserMessage.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sql/UserMessage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="-0.915078">
                   <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Exhibit.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Exhibit.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sql/Exhibit.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.94107455">
-                  <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+                <state vertical-scroll-proportion="-19.392857">
+                  <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
                   <folding>
                     <element signature="e#905#906#0" expanded="true" />
                     <element signature="e#941#942#0" expanded="true" />
@@ -119,8 +120,8 @@
         <option value="$PROJECT_DIR$/sql/UserMessage.java" />
         <option value="$PROJECT_DIR$/sql/UserAccount.java" />
         <option value="$PROJECT_DIR$/sql/myaql.sql" />
-        <option value="$PROJECT_DIR$/sql/Message.java" />
         <option value="$PROJECT_DIR$/sql/Exhibit.java" />
+        <option value="$PROJECT_DIR$/sql/Message.java" />
       </list>
     </option>
   </component>
@@ -645,12 +646,12 @@
       <option name="number" value="Default" />
       <updated>1448009975473</updated>
       <workItem from="1448009985692" duration="12905000" />
-      <workItem from="1448035427889" duration="537000" />
+      <workItem from="1448035427889" duration="1013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13442000" />
+    <option name="totallyTimeSpent" value="13918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -776,14 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/UserMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/myaql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -792,20 +785,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.52513">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/Exhibit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94107455">
-          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+        <state vertical-scroll-proportion="-19.392857">
+          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
           <folding>
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#941#942#0" expanded="true" />
@@ -824,6 +807,24 @@
             <element signature="e#1461#1462#0" expanded="true" />
             <element signature="e#1492#1493#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89081454">
+          <caret line="106" column="19" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/UserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.915078">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
