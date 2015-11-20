@@ -15,7 +15,7 @@ create table tb_userMsg(
 
 create table tb_msg(
   msg_id int auto_increment unique primary key,
-  obj_id int,
+  exb_id int,
   user_id int,
   user_name VARCHAR(255),
   msg_time VARCHAR(255),
@@ -23,11 +23,11 @@ create table tb_msg(
   msg_plus int
 )
 
-create table tb_obj(
-  obj_id int auto_increment unique primary key,
-  obj_name VARCHAR(255),
-  obj_imageaddr VARCHAR(255),
-  obj_demo text
+create table tb_exb(
+  exb_id int auto_increment unique primary key,
+  exb_name VARCHAR(255),
+  exb_imageaddr VARCHAR(255),
+  exb_demo text
 )
 
 

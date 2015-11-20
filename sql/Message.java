@@ -6,7 +6,7 @@ import java.time.*;
  */
 public class Message {
     private int msg_id;
-    private int obj_id;
+    private int exb_id;
     private int user_id;
     private String user_name;
     private LocalDateTime msg_time;
@@ -15,7 +15,7 @@ public class Message {
 
     public Message() {
         this.msg_id = 0;
-        this.obj_id = 0;
+        this.exb_id = 0;
         this.user_id = 0;
         this.user_name = null;
         this.msg_time = LocalDateTime.now();
@@ -23,10 +23,10 @@ public class Message {
         this.msg_plus = 0;
     }
 
-    public Message(int obj_id, int user_id, String user_name,
+    public Message(int exb_id, int user_id, String user_name,
                    LocalDateTime msg_time, String msg_addr, int msg_plus) {
         this.msg_id = 0;
-        this.obj_id = obj_id;
+        this.exb_id = exb_id;
         this.user_id = user_id;
         this.user_name = user_name;
         this.msg_time = LocalDateTime.of(
@@ -35,11 +35,11 @@ public class Message {
         this.msg_plus = msg_plus;
     }
 
-    public Message(int msg_id, int obj_id, int user_id,
+    public Message(int msg_id, int exb_id, int user_id,
                    String user_name, LocalDateTime msg_time,
                    String msg_addr, int msg_plus) {
         this.msg_id = msg_id;
-        this.obj_id = obj_id;
+        this.exb_id = exb_id;
         this.user_id = user_id;
         this.user_name = user_name;
         this.msg_time = msg_time.clone();
@@ -48,7 +48,7 @@ public class Message {
     }
 
     public void setMsg_id(int msg_id) { this.msg_id = msg_id; }
-    public void setObj_id(int obj_id) { this.obj_id = obj_id; }
+    public void setObj_id(int exb_id) { this.exb_id = exb_id; }
     public void setUser_id(int user_id) { this.user_id = user_id; }
     public void setUser_name(String user_name) { this.user_name = user_name; }
     public void setMsg_time(LocalDateTime msg_time) { this.msg_time = msg_time.clone(); }
@@ -56,7 +56,7 @@ public class Message {
     public void setMsg_plus(int msg_plus) { this.msg_plus = msg_plus; }
 
     public int getMsg_id() { return this.msg_id; }
-    public int getObj_id() { return this.obj_id; }
+    public int getObj_id() { return this.exb_id; }
     public int getUser_id() { return this.user_id; }
     public String getUser_name() { return this.user_name; }
     public LocalDateTime getMsg_time() { return this.msg_time; }
@@ -66,7 +66,7 @@ public class Message {
     @Override
     public String toString() {
         return "Message[msg_id=" + this.msg_id
-                + ",obj_id=" + this.obj_id
+                + ",exb_id=" + this.exb_id
                 + ",user_id=" + this.user_id
                 + ",user_name=" + this.user_name
                 + ",msg_time=" + this.msg_time
@@ -78,7 +78,7 @@ public class Message {
     public boolean updateMessage(DB db) {
         String sql = "update tb_msg set "
                 + "msg_id='" + this.msg_id
-                + "',obj_id='" + this.obj_id
+                + "',exb_id='" + this.exb_id
                 + "',user_id='" + this.user_id
                 + "',user_name='" + this.user_name
                 + "',msg_time='" + this.msg_time
