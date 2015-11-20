@@ -78,13 +78,13 @@ public class Exhibit {
                 + "exb_name='" + this.exb_name + "',"
                 + "exb_imageaddr='" + this.exb_imageaddr + "',"
                 + "exb_demo='" + this.exb_demo + "' "
-                + "where exb_id='" + this.exb_id + "'";
+                + "where exb_id=" + this.exb_id + "";
         return db.changeResultSet(sql);
     }
 
     public Exhibit selectExhibit(DB db) {
-        String sql = "select * from tb_exb where exb_id='"
-                + this.exb_id + "'";
+        String sql = "select * from tb_exb where exb_id="
+                + this.exb_id;
         ResultSet rs = db.getResultSet(sql);
 
         try {

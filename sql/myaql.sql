@@ -1,7 +1,7 @@
 create table tb_user(
   user_id int auto_increment unique primary key,
-  user_username VARCHAR(255) unique,
-  user_password VARCHAR(255)
+  user_name VARCHAR(255) unique,
+  user_pswd VARCHAR(255)
 )
 
 create table tb_userMsg(
@@ -9,7 +9,7 @@ create table tb_userMsg(
   user_name VARCHAR(255),
   user_sex VARCHAR(255),
   user_birth VARCHAR(255),
-  user_email VARCHAR(255),
+  user_email VARCHAR(255) unique,
   user_memo text
 )
 

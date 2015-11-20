@@ -29,8 +29,7 @@ public class Message {
         this.exb_id = exb_id;
         this.user_id = user_id;
         this.user_name = user_name;
-        this.msg_time = LocalDateTime.of(
-                msg_time.toDate(), msg_time.toTime());
+        this.msg_time = msg_time.clone());
         this.msg_addr = msg_addr;
         this.msg_plus = msg_plus;
     }
@@ -65,41 +64,36 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message[msg_id=" + this.msg_id
-                + ",exb_id=" + this.exb_id
-                + ",user_id=" + this.user_id
-                + ",user_name=" + this.user_name
-                + ",msg_time=" + this.msg_time
-                + ",msg_addr=" + this.msg_addr
-                + ",msg_plus=" + this.msg_plus
-                + "]";
+        return java.lang.String.format(
+                "Message[msg_id=%d,exb_id=%d,user_id=%d,user_name=%s,msg_time=%s,msg_addr=%s,msg_plus=%d]",
+                this.msg_id, this.exb_id, this.user_id,
+                this.user_name, this.msg_time.toString(),
+                this.msg_addr, this.msg_plus);
     }
 
     public boolean updateMessage(DB db) {
-        String sql = "update tb_msg set "
-                + "exb_id='" + this.exb_id + "',"
-                + "user_id='" + this.user_id + "',"
-                + "user_name='" + this.user_name + "',"
-                + "msg_time='" + this.msg_time + "',"
-                + "msg_addr='" + this.msg_addr + "',"
-                + "msg_plus='" + this.msg_plus + "' "
-                + "where msg_id='" + this.msg_id + "'";
+        String sql = java.lang.String.format(
+                "update tb_msg set exb_id=%d,user_id=%d,user_name='%s',msg_time='%s',msg_addr='%s',msg_plus=%d where msg_id=%d",
+                this.exb_id, this.user_id, this.user_name,
+                this.msg_time.toString(), this.msg_addr,
+                this.msg_plus, this.msg_id);
         return db.changeResultSet(sql);
     }
 
     public Message selectMessage(DB db) {
-        String sql = "select * from tb_msg where msg_id='"
-                + this.msg_id + "'";
+        String sql = java.lang.String.format(
+                "select * from tb_msg where msg_id=%d",
+                this.msg_id);
         ResultSet rs = db.getResultSet(sql);
 
         try {
             if(!rs.next()) { return null; }
-            this.setObj_id(Integer.parseInt(rs.getString(2)));
-            this.setUser_id(Integer.parseInt(rs.getString(3)));
+            this.setObj_id(rs.getInt(2));
+            this.setUser_id(rs.getInt(3));
             this.setUser_name(rs.getString(4));
             this.setMsg_time(LocalDateTime.parse(rs.getString(5)));
             this.setMsg_addr(rs.getString(6));
-            this.setMsg_plus(Integer.parseInt(rs.getString(7)));
+            this.setMsg_plus(rs.getInt(7));
         } catch (SQLException e) {
             e.printStackTrace();
         }
