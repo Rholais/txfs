@@ -54,11 +54,11 @@ public class DB {
     }
 
     public int changeResultSet(String sql){
-        int rs=-1;
-        if(con!=null){
+        int rs = 0;
+        if(con){
             try {
-                PreparedStatement pst =con.prepareStatement(sql);
-                rs=pst.executeUpdate();
+                PreparedStatement pst = con.prepareStatement(sql);
+                rs = pst.executeUpdate();
                 pst.close();
             } catch (SQLException e) {
                 e.printStackTrace();
