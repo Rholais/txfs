@@ -1,7 +1,7 @@
 package JavaBean;
 import java.sql.*;
 /**
- * Created by stiller on 15/11/18.
+ * Created by stiller on 15/11/20.
  */
 public class UserMessage {
     private int user_id;
