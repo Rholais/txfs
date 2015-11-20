@@ -92,14 +92,15 @@ public class UserMessage {
 
     public boolean updateUserMessage(DB db){
         String sql = "update tb_userMsg set "
-                + "user_name='" + this.user_name
-                + "',user_sex='" + this.user_sex
-                + "',user_birth='" + this.user_birth
-                + "',user_email='" + this.user_email
-                + "',user_memo='" + this.user_memo
-                + "'";
+                + "user_sex='" + this.user_sex + "',"
+                + "user_birth='" + this.user_birth + "',"
+                + "user_email='" + this.user_email + "',"
+                + "user_memo='" + this.user_memo + "' "
+                + "where user_id='" + this.user_id + "'";
         return db.changeResultSet(sql);
     }
 
-
+    public UserMessage selectUserMessage(DB db) {
+        String sql = "select * from tb_userMsg where "
+    }
 }

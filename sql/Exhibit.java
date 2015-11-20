@@ -75,11 +75,10 @@ public class Exhibit {
 
     public boolean updateExhibit(DB db) {
         String sql = "update tb_exb set "
-                + "exb_id='" + this.exb_id
-                + "',exb_name='" + this.exb_name
-                + "',exb_imageaddr='" + this.exb_imageaddr
-                + "',exb_demo='" + this.exb_demo
-                + "'";
+                + "exb_name='" + this.exb_name + "',"
+                + "exb_imageaddr='" + this.exb_imageaddr + "',"
+                + "exb_demo='" + this.exb_demo + "' "
+                + "where exb_id='" + this.exb_id + "'";
         return db.changeResultSet(sql);
     }
 

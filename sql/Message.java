@@ -77,14 +77,13 @@ public class Message {
 
     public boolean updateMessage(DB db) {
         String sql = "update tb_msg set "
-                + "msg_id='" + this.msg_id
-                + "',exb_id='" + this.exb_id
-                + "',user_id='" + this.user_id
-                + "',user_name='" + this.user_name
-                + "',msg_time='" + this.msg_time
-                + "',msg_addr='" + this.msg_addr
-                + "',msg_plus='" + this.msg_plus
-                + "'";
+                + "exb_id='" + this.exb_id + "',"
+                + "user_id='" + this.user_id + "',"
+                + "user_name='" + this.user_name + "',"
+                + "msg_time='" + this.msg_time + "',"
+                + "msg_addr='" + this.msg_addr + "',"
+                + "msg_plus='" + this.msg_plus + "' "
+                + "where msg_id='" + this.msg_id + "'";
         return db.changeResultSet(sql);
     }
 

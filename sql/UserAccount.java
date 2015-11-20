@@ -68,7 +68,9 @@ public class UserAccount {
             e.printStackTrace();
         }
 
-        sql="update tb_user set user_password='"+this.user_password+"'";
+        sql="update tb_user set "
+                + "user_password='" + this.user_password + "' "
+                + "where user_id='" + this.user_id + "'";
 
         return db.changeResultSet(sql);
     }
