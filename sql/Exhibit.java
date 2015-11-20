@@ -31,4 +31,57 @@ public class Exhibit {
         this.exb_imageaddr = exb_imageaddr;
         this.exb_demo = exb_demo;
     }
+
+    public void setExb_id(int exb_id) {
+        this.exb_id = exb_id;
+    }
+
+    public void setExb_name(String exb_name) {
+        this.exb_name = exb_name;
+    }
+
+    public void setExb_imageaddr(String exb_imageaddr) {
+        this.exb_imageaddr = exb_imageaddr;
+    }
+
+    public void setExb_demo(String exb_demo) {
+        this.exb_demo = exb_demo;
+    }
+
+    public int getExb_id() {
+        return exb_id;
+    }
+
+    public String getExb_name() {
+        return exb_name;
+    }
+
+    public String getExb_imageaddr() {
+        return exb_imageaddr;
+    }
+
+    public String getExb_demo() {
+        return exb_demo;
+    }
+
+    @Override
+    public String toString() {
+        return "Exhibit[exb_id=" + this.exb_id
+                + ",exb_name=" + this.exb_name
+                + ",exb_imageaddr=" + this.exb_imageaddr
+                + ",exb_demo=" this.exb_demo
+                + "]";
+    }
+
+    public boolean updateExhibit(DB db) {
+        String sql = "update tb_exb set "
+                + "exb_id='" + this.exb_id
+                + "',exb_name='" + this.exb_name
+                + "',exb_imageaddr='" + this.exb_imageaddr
+                + "',exb_demo='" + this.exb_demo
+                + "'";
+        return db.changeResultSet(sql);
+    }
+
+    
 }
