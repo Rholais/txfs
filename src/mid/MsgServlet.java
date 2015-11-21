@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 /**
  * Created by lhch on 2015/11/21 0021.
  */
-@WebServlet(name = "PlusServlet")
-public class PlusServlet extends HttpServlet {
+@WebServlet(name = "MsgServlet")
+public class MsgServlet extends HttpServlet {
 
     private Boolean status;
 
@@ -32,12 +33,15 @@ public class PlusServlet extends HttpServlet {
         response.setContentType("application/json");
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
-        int msg_id = Integer.parseInt(request.getParameter("id"));
-        Message msg = new Message(msg_id, 0, 0);
+        int exb_id = Integer.parseInt(request.getParameter("exb_id"));
+        int user_id = Integer.parseInt(request.getParameter("user_id"));
+        String user_name = request.getParameter("user_name");
+        LocalDateTime msg_time = LocalDateTime.parse(request.getParameter("msg_time"));
+        String msg_addr = request.getParameter("msg_addr");
+        Message msg = new Message(exb_id, user_id, user_name,
+                msg_time, msg_addr, 0);
         DB db = new DB();
-        msg = msg.selectMessageById(db).get(0);
-        msg.setMsg_plus(msg.getMsg_plus() + 1);
-        status = msg.updateMessage(db) != 0;
+        status = msg.insertMessage(db) != 0;
         Gson gson = new Gson();
         String json = gson.toJson(this);
         response.getWriter().print(json);

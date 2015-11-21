@@ -35,11 +35,12 @@ public class ExbServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         int exb_id = Integer.parseInt(request.getParameter("id"));
+        Boolean isLast = Integer.parseInt(request.getParameter("last")) != 0;
         exb = new Exhibit(exb_id);
         Message msg = new Message(0, exb_id, 0);
         DB db = new DB();
         exb = exb.selectExhibitById(db).get(0);
-        msg_al = msg.selectMessageByExb(db);
+        msg_al = msg.selectMessageByExb(db, isLast);
         Gson gson = new Gson();
         String json = gson.toJson(this);
         response.getWriter().print(json);

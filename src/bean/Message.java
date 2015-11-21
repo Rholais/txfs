@@ -115,11 +115,29 @@ public class Message {
                 this.msg_id);
         ResultSet rs = db.getResultSet(sql);
 
-        ArrayList<Message> al = new ArrayList<Message>();
+        ArrayList<Message> al = new ArrayList<>();
         try {
             while (rs.next()) {
                 Message msg = new Message(
                         this.msg_id, rs.getInt(2), rs.getInt(3),
+                        rs.getString(4),
+                        LocalDateTime.parse(rs.getString(5)),
+                        rs.getString(6), rs.getInt(7)
+                );
+                al.add(msg);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return al;
+    }
+
+    private  ArrayList<Message> selectMessage(ResultSet rs) {
+        ArrayList<Message> al = new ArrayList<>();
+        try {
+            while (rs.next()) {
+                Message msg = new Message(
+                        rs.getInt(1), rs.getInt(2), rs.getInt(3),
                         rs.getString(4),
                         LocalDateTime.parse(rs.getString(5)),
                         rs.getString(6), rs.getInt(7)
@@ -137,21 +155,20 @@ public class Message {
                 "select * from tb_msg where exb_id=%d",
                 this.exb_id);
         ResultSet rs = db.getResultSet(sql);
+        return selectMessage(rs);
+    }
 
-        ArrayList<Message> al = new ArrayList<Message>();
-        try {
-            while (rs.next()) {
-                Message msg = new Message(
-                        rs.getInt(1), this.exb_id, rs.getInt(3),
-                        rs.getString(4),
-                        LocalDateTime.parse(rs.getString(5)),
-                        rs.getString(6), rs.getInt(7)
-                );
-                al.add(msg);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+    public ArrayList<Message> selectMessageByExb(
+            DB db, Boolean isLast) {
+        String sql = java.lang.String.format(
+                "select * from tb_msg where exb_id=%d",
+                this.exb_id);
+        if(isLast) {
+            sql = sql + " order by msg_time desc";
+        } else {
+            sql = sql + " order by msg_plus desc";
         }
-        return al;
+        ResultSet rs = db.getResultSet(sql);
+        return selectMessage(rs);
     }
 }
