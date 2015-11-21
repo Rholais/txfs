@@ -96,33 +96,45 @@ public class UserAccount {
         return db.changeResultSet(sql);
     }
 
-    public UserAccount selectUserAccountById(DB db){
-        String sql = "select * from tb_user where user_id="
-                + this.user_id;
+    public ArrayList<UserAccount> selectUserAccountById(DB db){
+        String sql = java.lang.String.format(
+                "select * from tb_user where user_id=%d",
+                this.user_id
+        );
         ResultSet rs = db.getResultSet(sql);
 
+        ArrayList<UserAccount> al = new ArrayList<UserAccount>();
         try {
-            if(!rs.next()) return null;
-            this.setUser_name(rs.getString(2));
-            this.setUser_pswd(rs.getString(3));
+            while(rs.next()) {
+                UserAccount user = new UserAccount(
+                        this.user_id, rs.getString(2),
+                        rs.getString(3)
+                );
+                al.add(user);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return this;
+        return al;
     }
 
-    public UserAccount selectUserAccountByName(DB db){
+    public ArrayList<UserAccount> selectUserAccountByName(DB db){
         String sql = "select * from tb_user where user_name="
                 + this.user_name;
         ResultSet rs = db.getResultSet(sql);
 
+        ArrayList<UserAccount> al = new ArrayList<UserAccount>();
         try {
-            if(!rs.next()) return null;
-            this.setUser_id(rs.getInt(1));
-            this.setUser_pswd(rs.getString(3));
+            while(rs.next()) {
+                UserAccount user = new UserAccount(
+                        rs.getInt(1), this.user_name,
+                        rs.getString(3)
+                );
+                al.add(user);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return this;
+        return al;
     }
 }

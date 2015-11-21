@@ -2,6 +2,7 @@ package JavaBean;
 
 import java.sql.*;
 import java.time.*;
+import java.util.*;
 
 /**
  * Created by Rholais on 15/11/20.
@@ -91,23 +92,47 @@ public class Message {
         return db.changeResultSet(sql);
     }
 
-    public Message selectMessageById(DB db) {
+    public ArrayList<Message> selectMessageById(DB db) {
         String sql = java.lang.String.format(
                 "select * from tb_msg where msg_id=%d",
                 this.msg_id);
         ResultSet rs = db.getResultSet(sql);
 
+        ArrayList<Message> al = new ArrayList<Message>();
         try {
-            if(!rs.next()) { return null; }
-            this.setExb_id(rs.getInt(2));
-            this.setUser_id(rs.getInt(3));
-            this.setUser_name(rs.getString(4));
-            this.setMsg_time(LocalDateTime.parse(rs.getString(5)));
-            this.setMsg_addr(rs.getString(6));
-            this.setMsg_plus(rs.getInt(7));
+            while (rs.next()) {
+                Message msg = new Message(
+                        rs.getInt(2), rs.getInt(3), rs.getString(4),
+                        LocalDateTime.parse(rs.getString(5)),
+                        rs.getString(6), rs.getInt(7)
+                );
+                al.add(msg)
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return this;
+        return al;
+    }
+
+    public ArrayList<Message> selectMessageByExb(DB db) {
+        String sql = java.lang.String.format(
+                "select * from tb_msg where exb_id=%d",
+                this.exb_id);
+        ResultSet rs = db.getResultSet(sql);
+
+        ArrayList<Message> al = new ArrayList<Message>();
+        try {
+            while (rs.next()) {
+                Message msg = new Message(
+                        rs.getInt(2), rs.getInt(3), rs.getString(4),
+                        LocalDateTime.parse(rs.getString(5)),
+                        rs.getString(6), rs.getInt(7)
+                );
+                al.add(msg)
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return al;
     }
 }
