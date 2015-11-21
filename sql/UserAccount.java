@@ -57,9 +57,27 @@ public class UserAccount {
                 + "]";
     }
 
-    public boolean updateUserAccount(DB db){
-        String sql=null;
-        sql="select * from tb_user where user_name='"
+    public boolean insertUserAccount(DB db) {
+        String sql = "select * from tb_user where user_name='"
+                + this.user_name + "'";
+        ResultSet rs = db.getResultSet(sql);
+
+        try {
+            if(rs.next()){
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        sql = java.lang.String.format(
+                "insert into tb_user (user_uame,user_pswd) value (%d,%s,%s)",
+                user_name, user_pswd );
+        return  db.changeResultSet(sql);
+    }
+
+    public boolean updateUserAccount(DB db) {
+        String sql = "select * from tb_user where user_name='"
                 + this.user_name + "'";
         ResultSet rs = db.getResultSet(sql);
 

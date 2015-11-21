@@ -1,5 +1,8 @@
 package JavaBean;
+
 import java.sql.*;
+
+import DB;
 /**
  * Created by Rholais on 15/11/20.
  */
