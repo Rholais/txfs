@@ -27,7 +27,8 @@ create table tb_exb(
   exb_id int auto_increment unique primary key,
   exb_name VARCHAR(255),
   exb_imageaddr VARCHAR(255),
-  exb_demo text
+  exb_demo text,
+  exb_num int
 )
 
 
