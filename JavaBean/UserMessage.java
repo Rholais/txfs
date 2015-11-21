@@ -91,6 +91,16 @@ public class UserMessage {
                 this.user_memo);
     }
 
+    public boolean insertUserMessage(DB db) {
+        Srting sql = java.lang.String.format(
+                "insert into tb_userMsg (user_id,user_name,user_sex,user_birth,user_email,user_memo) value (%d,%s,%s,%s,%s,%s)",
+                this.user_id, this.user_sex,
+                this.user_birth.toString(), this.user_email,
+                this.user_memo);
+        )
+        return  db.changeResultSet(sql);
+    }
+
     public boolean updateUserMessage(DB db){
         String sql = java.lang.String.format(
                 "update tb_userMsg set user_sex='%s',user_birth='%s',user_email='%s',user_memo='%s' where user_id=%d",

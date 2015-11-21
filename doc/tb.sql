@@ -5,7 +5,7 @@ create table tb_user(
 )
 
 create table tb_userMsg(
-  user_id int,
+  user_id int unique,
   user_name VARCHAR(255) unique,
   user_sex VARCHAR(255),
   user_birth VARCHAR(255),
