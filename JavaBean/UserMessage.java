@@ -109,22 +109,26 @@ public class UserMessage {
         return db.changeResultSet(sql);
     }
 
-    public UserMessage selectUserMessageById(DB db) {
+    public ArrayList<UserMessage> selectUserMessageById(DB db) {
         String sql = java.lang.String.format(
                 "select * from tb_userMsg where user_id=%d",
                 this.user_id);
         ResultSet rs = db.getResultSet(sql);
 
+        ArrayList<UserMessage> al = new ArrayList<UserMessage>();
         try {
-            if(!rs.next()) { return null; }
-            this.setUser_name(rs.getString(2));
-            this.setUser_sex(rs.getString(3));
-            this.setUser_birth(LocalDate.parse(rs.getString(4)));
-            this.setUser_email(rs.getString(5));
-            this.setUser_memo(rs.getString(6));
+            while(rs.next()) {
+                UserMessage userMsg = new UserMessage(
+                        this.user_id, rs.getString(2),
+                        rs.getString(3),
+                        LocalDate.parse(rs.getString(4)),
+                        rs.getString(5), getString(6)
+                );
+                al.add(userMsg);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return this;
+        return al;
     }
 }

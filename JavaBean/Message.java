@@ -102,7 +102,8 @@ public class Message {
         try {
             while (rs.next()) {
                 Message msg = new Message(
-                        rs.getInt(2), rs.getInt(3), rs.getString(4),
+                        this.msg_id, rs.getInt(2), rs.getInt(3),
+                        rs.getString(4),
                         LocalDateTime.parse(rs.getString(5)),
                         rs.getString(6), rs.getInt(7)
                 );
@@ -124,11 +125,12 @@ public class Message {
         try {
             while (rs.next()) {
                 Message msg = new Message(
-                        rs.getInt(2), rs.getInt(3), rs.getString(4),
+                        rs.getInt(1), this.exb_id, rs.getInt(3),
+                        rs.getString(4),
                         LocalDateTime.parse(rs.getString(5)),
                         rs.getString(6), rs.getInt(7)
                 );
-                al.add(msg)
+                al.add(msg);
             }
         } catch (SQLException e) {
             e.printStackTrace();

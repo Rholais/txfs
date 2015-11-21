@@ -93,16 +93,21 @@ public class Exhibit {
         return db.changeResultSet(sql);
     }
 
-    public Exhibit selectExhibitById(DB db) {
+    public ArrayList<Exhibit> selectExhibitById(DB db) {
         String sql = "select * from tb_exb where exb_id="
                 + this.exb_id;
         ResultSet rs = db.getResultSet(sql);
 
+        ArrayList<Exhibit> al = new ArrayList<Exhibit>();
         try {
-            if(!rs.next()) { return null; }
-            this.setExb_name(rs.getString(2));
-            this.setExb_imageaddr(rs.getString(3));
-            this.setExb_demo(rs.getString(4));
+            while(rs.next()) {
+                Exhibit exb = new Exhibit(
+                        this.exb_id, rs.getString(2),
+                        rs.getString(3), rs.getString(4)
+                );
+                al.add(exb);
+            }
+            this.setExb_name();
         } catch (SQLException e) {
             e.printStackTrace();
         }
