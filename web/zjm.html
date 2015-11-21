@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
-<link href="static/h-ui/css/style.css" rel="stylesheet" type="text/css" />
-<link href="lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
-<link href="lib/bootstrapSwitch/bootstrapSwitch.css" rel="stylesheet" type="text/css" />
-<link href="lib/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="zjm.css">
-	<title>txfs</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+      <link href="static/h-ui/css/style.css" rel="stylesheet" type="text/css" />
+      <link href="lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+      <link href="lib/bootstrapSwitch/bootstrapSwitch.css" rel="stylesheet" type="text/css" />
+      <link href="lib/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="zjm.css">
+      <title>txfs</title>
+      <script type="text/javascript" src='Lib/jquery.js' ></script>
 </head>
-<body>
-<div id="image">
-	<img src='img/pic (1).jpg' id='img'>
-</div>
-<div id="top1" class='top'>
-   <div id="touxiang1" class='touxiang'>
-   	<img src='img/heart.jpg'></img>
-   </div>
-   <div id="recordDiv1" class='recordDiv'>
-   	<audio src="mp3/test.wav" preload="true"  controls></audio>
-   </div>
-</div>
-<div id="top2" class='top'>
-   <div id="touxiang2" class='touxiang'>   	
-   	<img src='img/heart.jpg'></img>
-</div>
-   <div id="recordDiv2" class='recordDiv'>
-   	<audio src="mp3/test.wav" preload="true"  controls></audio>
-   </div>
-</div>
-<div id="top3" class='top'>
-   <div id="touxiang3" class='touxiang'>
-      	<img src='img/heart.jpg'></img>
-	</div>
-   <div id="recordDiv3" class='recordDiv'>
-   	<audio src="mp3/test.wav" preload="true"  controls></audio>
-   </div>
-</div>
 
-<!-- <div id="btn">
-	<input type="button" name="button" id="button" value="按钮">
-</div> -->
-
+<body onload=" ">
+      <div id="image">
+            <img src='img/pic (1).jpg' id='img'>
+      </div>
+      <div id="top1" class='top'>
+            <div id="touxiang1" class='touxiang'>
+                  <img src='img/heart.jpg'></img>
+            </div>
+            <div id="recordDiv1" class='recordDiv'>
+                  <button id='button1' onclick="play1();" class="btn btn-default radius audioStart" type="button">点击播放</button>
+                  <audio id='audio1' src="mp3/test.wav" preload="true" controls hidden></audio>
+            </div>
+      </div>
+      <div id="top2" class='top'>
+            <div id="touxiang2" class='touxiang'>
+                  <img src='img/heart.jpg'></img>
+            </div>
+            <div id="recordDiv2" class='recordDiv'>
+                  <button id='button2' onclick="play2();" class="btn btn-default radius audioStart" type="button">点击播放</button>
+                  <audio id='audio2' src="mp3/test.wav" preload="true" controls hidden></audio>
+            </div>
+      </div>
+      <div id="top3" class='top'>
+            <div id="touxiang3" class='touxiang'>
+                  <img src='img/heart.jpg'></img>
+            </div>
+            <div id="recordDiv3" class='recordDiv'>
+                  <button id='button3' onclick="play3();" class="btn btn-default radius audioStart" type="button">点击播放</button>
+                  <audio id='audio3' src="mp3/test.wav" preload="true" controls hidden></audio>
+            </div>
+      </div>
 </body>
+
 </html>
+      <script>
+      function play1(){
+            var audio=document.getElementById('audio1');
+            audio.play();
+      } 
+      function play2(){
+            var audio=document.getElementById('audio2');
+            audio.play();
+      } 
+      function play3(){
+            var audio=document.getElementById('audio3');
+            audio.play();
+      } 
+      
+</script>

@@ -10,6 +10,7 @@
 	height: 30px;
 	position: relative;
 	background-color: #fff;
+	margin: 8px;
 }
 img{
 	width: 100%;
@@ -32,11 +33,16 @@ audio{
 	left: 45px;
 	/*right: -50px;*/
 	position: relative;
-	top:-20px;
+	top:-30px;
 	background-color: #fff;
 }
+.audioStart{
+	width:90%;
+	height: 30px;
+	top: -10px;
+}
 
-
+/*
 #top1{
     top: 10px;
 }
@@ -45,7 +51,7 @@ audio{
 }
 #top3{
 	top: 30px;
-}
+}*/
 
 
 #btn{
