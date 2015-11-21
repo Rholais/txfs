@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e2f4b65-b8f3-49f7-a989-01ca1e105dec" name="Default" comment="Merge duplicated code of `Message`">
+    <list default="true" id="6e2f4b65-b8f3-49f7-a989-01ca1e105dec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bean/Message.java" afterPath="$PROJECT_DIR$/src/bean/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mid/MsgServlet.java" afterPath="$PROJECT_DIR$/src/mid/MsgServlet.java" />
     </list>
     <ignored path="txfs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +48,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ExbServlet.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ExbServlet.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/mid/ExbServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.45454547">
-                  <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="36" column="58" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="58" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MsgServlet.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/mid/MsgServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.74242425">
+                  <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -140,9 +152,9 @@
         <option value="$PROJECT_DIR$/src/bean/Exhibit.java" />
         <option value="$PROJECT_DIR$/src/bean/DB.java" />
         <option value="$PROJECT_DIR$/src/mid/PlusServlet.java" />
-        <option value="$PROJECT_DIR$/src/mid/MsgServlet.java" />
         <option value="$PROJECT_DIR$/src/mid/ExbServlet.java" />
         <option value="$PROJECT_DIR$/src/bean/Message.java" />
+        <option value="$PROJECT_DIR$/src/mid/MsgServlet.java" />
       </list>
     </option>
   </component>
@@ -738,7 +750,7 @@
       <option name="number" value="Default" />
       <updated>1448096857504</updated>
       <workItem from="1448096860785" duration="9994000" />
-      <workItem from="1448111110121" duration="7916000" />
+      <workItem from="1448111110121" duration="9288000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Project">
       <created>1448097350357</created>
@@ -800,11 +812,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448121970937</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge duplicated code of `Message`">
+      <created>1448123584953</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1448123584953</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17910000" />
+    <option name="totallyTimeSpent" value="19282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1001,14 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mid/MsgServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bean/Exhibit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028099174">
@@ -1025,21 +1035,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.709596">
+          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mid/ExbServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45454547">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/mid/MsgServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.709596">
-          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="0.74242425">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

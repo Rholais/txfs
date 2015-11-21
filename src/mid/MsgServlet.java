@@ -19,16 +19,9 @@ public class MsgServlet extends HttpServlet {
 
     private Boolean status;
 
-    protected void doPost(
-            HttpServletRequest request,
-            HttpServletResponse response)
-            throws ServletException, IOException {
-
-    }
-
-    protected void doGet(
-            HttpServletRequest request,
-            HttpServletResponse response)
+    private void dot(
+    HttpServletRequest request,
+    HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("application/json");
         request.setCharacterEncoding("utf-8");
@@ -45,5 +38,19 @@ public class MsgServlet extends HttpServlet {
         Gson gson = new Gson();
         String json = gson.toJson(this);
         response.getWriter().print(json);
+    }
+
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+        dot(request, response);
+    }
+
+    protected void doGet(
+            HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+        dot(request, response);
     }
 }
