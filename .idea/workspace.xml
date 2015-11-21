@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e2f4b65-b8f3-49f7-a989-01ca1e105dec" name="Default" comment="">
+    <list default="true" id="6e2f4b65-b8f3-49f7-a989-01ca1e105dec" name="Default" comment="Merge duplicated code of `Message`">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bean/Message.java" afterPath="$PROJECT_DIR$/src/bean/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mid/ExbServlet.java" afterPath="$PROJECT_DIR$/src/mid/ExbServlet.java" />
     </list>
     <ignored path="txfs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +51,8 @@
           <file leaf-file-name="ExbServlet.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/mid/ExbServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7752066">
-                  <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+                <state vertical-scroll-proportion="0.45454547">
+                  <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -110,8 +109,8 @@
           <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/bean/Message.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.353719">
-                  <caret line="157" column="48" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="48" />
+                <state vertical-scroll-proportion="5.709596">
+                  <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
@@ -739,7 +738,7 @@
       <option name="number" value="Default" />
       <updated>1448096857504</updated>
       <workItem from="1448096860785" duration="9994000" />
-      <workItem from="1448111110121" duration="6685000" />
+      <workItem from="1448111110121" duration="7916000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Project">
       <created>1448097350357</created>
@@ -795,11 +794,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448119733043</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Sort by `msg_time` or `msg_plus`">
+      <created>1448121970937</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1448121970937</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16679000" />
+    <option name="totallyTimeSpent" value="17910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -807,7 +812,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -881,18 +886,12 @@
     <MESSAGE value="Fix `DB` connection error" />
     <MESSAGE value="Add `doGet` method to `PlusServlet`" />
     <MESSAGE value="Add `doGet` method to `MsgServlet`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `doGet` method to `MsgServlet`" />
+    <MESSAGE value="Sort by `msg_time` or `msg_plus`" />
+    <MESSAGE value="Merge duplicated code of `Message`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge duplicated code of `Message`" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/mid/ExbServlet.java</url>
-          <line>19</line>
-          <properties field="exb" class="mid.ExbServlet" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
@@ -1026,21 +1025,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.353719">
-          <caret line="157" column="48" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mid/ExbServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7752066">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.45454547">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.709596">
+          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
