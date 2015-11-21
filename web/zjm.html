@@ -13,7 +13,7 @@
       <script type="text/javascript" src='Lib/jquery.js'></script>
 </head>
 
-<body >
+<body>
       <div id="image">
             <img src='img/pic (1).jpg' id='img'>
             <div id='describe'>
@@ -24,31 +24,37 @@
       <div id="top1" class='top'>
             <div id='name1' class='name'>用户1</div>
             <div id="touxiang1" class='touxiang'>
-                  <img src='img/heart.jpg'><div class='plus' id='plus1'>23</div></img>
+                  <img src='img/heart.jpg'>
+                  <div class='plus' value='' id='plus1'>23</div>
+                  </img>
             </div>
             <div id="recordDiv1" class='recordDiv'>
-                  <button id='button1' onclick="play1();" class="btn btn-default radius audioStart" type="button">点击播放</button>
-                  <audio id='audio1' src="mp3/test.wav" preload="true" controls hidden></audio>
+                  <button id='button1' onclick="playReset('1');" class="btn btn-default radius audioStart" type="button">点击播放</button>
+                  <audio id='audio1' src="mp3/test1.wav" preload="true" controls hidden></audio>
             </div>
       </div>
       <div id="top2" class='top'>
             <div id='name2' class='name'>用户2</div>
             <div id="touxiang2" class='touxiang'>
-                  <img src='img/heart.jpg'><div class='plus' id='plus2'>23</div></img>
+                  <img src='img/heart.jpg'>
+                  <div class='plus' value='' id='plus2'>23</div>
+                  </img>
             </div>
             <div id="recordDiv2" class='recordDiv'>
-                  <button id='button2' onclick="play2();" class="btn btn-default radius audioStart" type="button">点击播放</button>
-                  <audio id='audio2' src="mp3/test.wav" preload="true" controls hidden></audio>
+                  <button id='button2' onclick="playReset('2');" class="btn btn-default radius audioStart" type="button">点击播放</button>
+                  <audio id='audio2' src="mp3/test2.wav" preload="true" controls hidden></audio>
             </div>
       </div>
       <div id="top3" class='top'>
             <div id='name3' class='name'>用户3</div>
             <div id="touxiang3" class='touxiang'>
-                  <img src='img/heart.jpg'><div class='plus' id='plus3'>23</div></img>
+                  <img src='img/heart.jpg'>
+                  <div class='plus' value='' id='plus3'>23</div>
+                  </img>
             </div>
             <div id="recordDiv3" class='recordDiv'>
-                  <button id='button3' onclick="play3();" class="btn btn-default radius audioStart" type="button">点击播放</button>
-                  <audio id='audio3' src="mp3/test.wav" preload="true" controls hidden></audio>
+                  <button id='button3' onclick="playReset('3');" class="btn btn-default radius audioStart" type="button">点击播放</button>
+                  <audio id='audio3' src="mp3/test3.wav" preload="true" controls hidden></audio>
             </div>
       </div>
 </body>
@@ -56,6 +62,15 @@
 </html>
 <script>
       $(document).ready(function(){
+            $('.plus').click(function(){
+                  $(this).text(parseInt($(this).text())+1);
+                  $.ajax({
+                        url:'128.0.0.1/ttttttttttttttttttttttttttttt?id='+$(this).val(),
+                        asnyc: true,
+                        success: function(){
+                        }
+                  });
+            });
             var id=$.url().param('id');
             $.ajax({
                   url: '128.0.0.1:80/tttttttttttttttttttttttttttt?id='+id,//todo
@@ -64,38 +79,38 @@
                   success:function(data){
                         if(data!=undefined){
                               document.getElementById('img').src=data.img;
-                              document.ge
+                              $('#imgTitle').text(data.title);
+                              $('#con').text(data.con);
+                              $('#name1').text(data.list[0].owner);
+                              $('#plus1').text(data.list[0].plus);
+                              document.getElementById('audio1').src=data.list[0].mp3;
+                              $('#name2').text(data.list[1].owner);
+                              $('#plus2').text(data.list[1].plus);
+                              document.getElementById('audio2').src=data.list[1].mp3;
+                              $('#name3').text(data.list[2].owner);
+                              $('#plus3').text(data.list[2].plus);
+                              document.getElementById('audio3').src=data.list[2].mp3;
                         }
                   }
-            })
+            });
+            
       });
-      function play1(){
-            playReset('1');
-      } 
-      function play2(){
-            playReset('2');
-      } 
-      function play3(){
-            playReset('3');
-      } 
       
-      function playReset(id){
-            var audio=document.getElementById('audio'+id);
-            var button=$('#button'+id);
+      
+
+      function playReset(idint){
+            var audio=document.getElementById('audio'+idint);
+            var button=$('#button'+idint);
             audio.play();
-            button.html('...');
+            button.text('...');
             audio.onended=function() {
-                  endReset(id);
+                  endReset(idint);
             };
       }
-      
-      function endReset(id){
-                  var button=$('#button'+id);
-                  button.html('点击播放');
-                  button.attr('style').val('');
-                  // button.css('color', '#333');
-                  // button.css('background-color', '#c7c7c7');
-                  // button.css('border-color', '#c7c7c7');
+      function endReset(idint){
+            var button=$('#button'+idint);
+            button.text('点击播放');
+            button.attr('style','');
       }
 
 </script>
