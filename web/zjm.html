@@ -17,15 +17,15 @@
       <div id="image">
             <img src='img/pic (1).jpg' id='img'>
             <div id='describe'>
-                  <div id='imgTitle'>一只蛤</div>
-                  <div id='con'>本蛤曾与华莱士谈笑风生</div>
+                  <div id='imgTitle'>···</div>
+                  <div id='con'>············</div>
             </div>
       </div>
       <div id="top1" class='top'>
-            <div id='name1' class='name'>用户1</div>
+            <div id='name1' class='name'>···</div>
             <div id="touxiang1" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus1'>23</div>
+                  <div class='plus' value='' id='plus1'></div>
                   </img>
             </div>
             <div id="recordDiv1" class='recordDiv'>
@@ -34,10 +34,10 @@
             </div>
       </div>
       <div id="top2" class='top'>
-            <div id='name2' class='name'>用户2</div>
+            <div id='name2' class='name'>···</div>
             <div id="touxiang2" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus2'>23</div>
+                  <div class='plus' value='' id='plus2'></div>
                   </img>
             </div>
             <div id="recordDiv2" class='recordDiv'>
@@ -46,10 +46,10 @@
             </div>
       </div>
       <div id="top3" class='top'>
-            <div id='name3' class='name'>用户3</div>
+            <div id='name3' class='name'>···</div>
             <div id="touxiang3" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus3'>23</div>
+                  <div class='plus' value='' id='plus3'></div>
                   </img>
             </div>
             <div id="recordDiv3" class='recordDiv'>
@@ -71,7 +71,7 @@
                         }
                   });
             });
-            var id=$.url().param('id');
+            var id;
             $.ajax({
                   url: '128.0.0.1:80/tttttttttttttttttttttttttttt?id='+id,//todo
                   asnyc: false,
@@ -82,23 +82,24 @@
                               $('#imgTitle').text(data.renran);
                               $('#con').text(data.exb_demo);
                               
-                              if(data.list.length>=3){
+                              if(data.list.length>=1){
                               
                                     $('#name1').text(data.list[0].user_name);
                                     $('#plus1').text(data.list[0].msg_plus);
                                     $('#plus1').val(data.list[0].msg_id);
-                                    document.getElementById('audio1').src=data.list[0].msg_addr;
-                                    
+                                    document.getElementById('audio1').src=data.list[0].msg_addr;                              
+                              }
+                              if(data.list.length>=2){                                    
                                     $('#name2').text(data.list[1].user_name);
                                     $('#plus2').text(data.list[1].msg_plus);
                                     $('#plus2').val(data.list[1].msg_id);
-                                    document.getElementById('audio2').src=data.list[1].msg_addr;
-                                    
+                                    document.getElementById('audio2').src=data.list[1].msg_addr;                                    
+                              }
+                              if(data.list.length>=3){                              
                                     $('#name3').text(data.list[2].user_name);
                                     $('#plus3').text(data.list[2].msg_plus);
                                     $('#plus3').val(data.list[2].msg_id);
                                     document.getElementById('audio3').src=data.list[2].msg_addr;
-                              
                               }
                         }
                   }
@@ -117,10 +118,12 @@
                   endReset(idint);
             };
       }
+      
       function endReset(idint){
             var button=$('#button'+idint);
             button.text('点击播放');
-            button.attr('style','');
+            // button.attr('class','btn btn-default radius audioStart');            
+            // button.attr('style','');
       }
 
 </script>
