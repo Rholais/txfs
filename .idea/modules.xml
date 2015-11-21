@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/txfs.iml" filepath="$PROJECT_DIR$/.idea/txfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/txfs.iml" filepath="$PROJECT_DIR$/txfs.iml" />
     </modules>
   </component>
 </project>
