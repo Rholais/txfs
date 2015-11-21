@@ -27,36 +27,36 @@
             <div id='name1H' class='name'>用户··</div>
             <div id="touxiang1" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus1'></div>
+                  <div class='plus' value='' id='plus1H'></div>
                   </img>
             </div>
             <div id="recordDiv1" class='recordDiv'>
                   <button id='button1' onclick="playReset('1');" class="btn btn-default radius audioStart" type="button">点击播放</button>
-                  <audio id='audio1' src="mp3/test1.wav" preload="true" controls hidden></audio>
+                  <audio id='audio1H' src="mp3/test1.wav" preload="true" controls hidden></audio>
             </div>
       </div>
       <div id="top2" class='top'>
-            <div id='name2' class='name'>···</div>
+            <div id='name2H' class='name'>···</div>
             <div id="touxiang2" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus2'></div>
+                  <div class='plus' value='' id='plus2H'></div>
                   </img>
             </div>
             <div id="recordDiv2" class='recordDiv'>
                   <button id='button2' onclick="playReset('2');" class="btn btn-default radius audioStart" type="button">点击播放</button>
-                  <audio id='audio2' src="mp3/test2.wav" preload="true" controls hidden></audio>
+                  <audio id='audio2H' src="mp3/test2.wav" preload="true" controls hidden></audio>
             </div>
       </div>
       <div id="top3" class='top'>
-            <div id='name3' class='name'>···</div>
+            <div id='name3H' class='name'>···</div>
             <div id="touxiang3" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus3'></div>
+                  <div class='plus' value='' id='plus3H'></div>
                   </img>
             </div>
             <div id="recordDiv3" class='recordDiv'>
                   <button id='button3' onclick="playReset('3');" class="btn btn-default radius audioStart" type="button">点击播放</button>
-                  <audio id='audio3' src="mp3/test3.wav" preload="true" controls hidden></audio>
+                  <audio id='audio3H' src="mp3/test3.wav" preload="true" controls hidden></audio>
             </div>
       </div>
       
@@ -125,22 +125,22 @@
                               
                               if(data.list.length>=1){
                               
-                                    $('#name1').text(data.list[0].user_name);
-                                    $('#plus1').text(data.list[0].msg_plus);
-                                    $('#plus1').val(data.list[0].msg_id);
-                                    document.getElementById('audio1').src=data.list[0].msg_addr;                              
+                                    $('#name1H').text(data.list[0].user_name);
+                                    $('#plus1H').text(data.list[0].msg_plus);
+                                    $('#plus1H').val(data.list[0].msg_id);
+                                    document.getElementById('audio1H').src=data.list[0].msg_addr;                              
                               }
                               if(data.list.length>=2){                                    
-                                    $('#name2').text(data.list[1].user_name);
-                                    $('#plus2').text(data.list[1].msg_plus);
-                                    $('#plus2').val(data.list[1].msg_id);
-                                    document.getElementById('audio2').src=data.list[1].msg_addr;                                    
+                                    $('#name2H').text(data.list[1].user_name);
+                                    $('#plus2H').text(data.list[1].msg_plus);
+                                    $('#plus2H').val(data.list[1].msg_id);
+                                    document.getElementById('audio2H').src=data.list[1].msg_addr;                                    
                               }
                               if(data.list.length>=3){                              
-                                    $('#name3').text(data.list[2].user_name);
-                                    $('#plus3').text(data.list[2].msg_plus);
-                                    $('#plus3').val(data.list[2].msg_id);
-                                    document.getElementById('audio3').src=data.list[2].msg_addr;
+                                    $('#name3H').text(data.list[2].user_name);
+                                    $('#plus3H').text(data.list[2].msg_plus);
+                                    $('#plus3H').val(data.list[2].msg_id);
+                                    document.getElementById('audio3H').src=data.list[2].msg_addr;
                               }
                         }
                   }
