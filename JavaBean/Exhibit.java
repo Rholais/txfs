@@ -76,16 +76,24 @@ public class Exhibit {
                 + "]";
     }
 
+    public boolean insertExhibit(DB db) {
+        String sql = java.lang.String.format(
+                "insert into tb_exb (exb_name,exb_imageaddr,exb_demo) value (‘%s‘,’%s’,'%s')",
+                this.exb_name, this.exb_imageaddr, this.exb_demo
+        );
+        return  db.changeResultSet(sql);
+    }
+
     public boolean updateExhibit(DB db) {
-        String sql = "update tb_exb set "
-                + "exb_name='" + this.exb_name + "',"
-                + "exb_imageaddr='" + this.exb_imageaddr + "',"
-                + "exb_demo='" + this.exb_demo + "' "
-                + "where exb_id=" + this.exb_id + "";
+        String sql = java.lang.String.format(
+                "update tb_exb set exb_name='%s',exb_imageaddr='%s',exb_demo='%s' where exb_id=%d",
+                this.exb_name, this.exb_imageaddr, this.exb_demo,
+                this.exb_id
+        );
         return db.changeResultSet(sql);
     }
 
-    public Exhibit selectExhibit(DB db) {
+    public Exhibit selectExhibitById(DB db) {
         String sql = "select * from tb_exb where exb_id="
                 + this.exb_id;
         ResultSet rs = db.getResultSet(sql);

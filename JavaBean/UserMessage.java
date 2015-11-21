@@ -109,7 +109,7 @@ public class UserMessage {
         return db.changeResultSet(sql);
     }
 
-    public UserMessage selectUserMessage(DB db) {
+    public UserMessage selectUserMessageById(DB db) {
         String sql = java.lang.String.format(
                 "select * from tb_userMsg where user_id=%d",
                 this.user_id);

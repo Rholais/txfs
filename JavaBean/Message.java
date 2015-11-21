@@ -91,7 +91,7 @@ public class Message {
         return db.changeResultSet(sql);
     }
 
-    public Message selectMessage(DB db) {
+    public Message selectMessageById(DB db) {
         String sql = java.lang.String.format(
                 "select * from tb_msg where msg_id=%d",
                 this.msg_id);
