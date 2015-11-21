@@ -93,11 +93,11 @@ public class UserMessage {
 
     public boolean insertUserMessage(DB db) {
         Srting sql = java.lang.String.format(
-                "insert into tb_userMsg (user_id,user_name,user_sex,user_birth,user_email,user_memo) value (%d,%s,%s,%s,%s,%s)",
+                "insert into tb_userMsg (user_id,user_name,user_sex,user_birth,user_email,user_memo) value (%d,'%s','%s','%s','%s','%s')",
                 this.user_id, this.user_sex,
                 this.user_birth.toString(), this.user_email,
-                this.user_memo);
-        )
+                this.user_memo
+        );
         return  db.changeResultSet(sql);
     }
 

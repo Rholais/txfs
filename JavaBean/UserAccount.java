@@ -71,7 +71,7 @@ public class UserAccount {
         }
 
         sql = java.lang.String.format(
-                "insert into tb_user (user_uame,user_pswd) value (%d,%s,%s)",
+                "insert into tb_user (user_uame,user_pswd) value ('%s','%s')",
                 this.user_name, this.user_pswd );
         return  db.changeResultSet(sql);
     }
