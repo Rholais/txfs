@@ -10,7 +10,7 @@
       <link href="lib/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
       <link rel="stylesheet" type="text/css" href="zjm.css">
       <title>txfs</title>
-      <script type="text/javascript" src='Lib/jquery.js' ></script>
+      <script type="text/javascript" src='Lib/jquery.js'></script>
 </head>
 
 <body onload=" ">
@@ -47,18 +47,34 @@
 </body>
 
 </html>
-      <script>
+<script>
       function play1(){
-            var audio=document.getElementById('audio1');
-            audio.play();
+            playReset('1');
       } 
       function play2(){
-            var audio=document.getElementById('audio2');
-            audio.play();
+            playReset('2');
       } 
       function play3(){
-            var audio=document.getElementById('audio3');
-            audio.play();
+            playReset('3');
       } 
       
+      function playReset(id){
+            var audio=document.getElementById('audio'+id);
+            var button=$('#button'+id);
+            audio.play();
+            button.html('...');
+            audio.onended=function() {
+                  endReset(id);
+            };
+      }
+      
+      function endReset(id){
+                  var button=$('#button'+id);
+                  button.attr('style').val('');
+                  button.html('点击播放');
+                  // button.css('color', '#333');
+                  // button.css('background-color', '#c7c7c7');
+                  // button.css('border-color', '#c7c7c7');
+      }
+
 </script>
