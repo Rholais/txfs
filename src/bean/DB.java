@@ -9,9 +9,8 @@ public class DB {
     Statement stm = null;
 
     public DB(){
-
         getCon();
-
+        getStatement(con);
     }
 
     private void getCon(){
@@ -23,7 +22,7 @@ public class DB {
         }
 
         try {
-         con=DriverManager.getConnection("jdbc:mysql://localhost:3306/transformers?userUnicode=true&characterEncoding=utf8", "root","123456");
+         con=DriverManager.getConnection("jdbc:mysql://localhost:3306/txfs?userUnicode=true&characterEncoding=utf8", "root","123456");
         } catch (SQLException e) {
             e.printStackTrace();
         }
