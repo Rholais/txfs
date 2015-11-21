@@ -51,10 +51,10 @@ public class UserAccount {
 
     @Override
     public String toString(){
-        return "UserAccount [user_id=" + user_id
-                + ",user_name=" + user_name
-                + ",user_pswd=" + user_pswd
-                + "]";
+        return java.lang.String.format(
+                "UserAccount [user_id=%d,user_name=%s,user_pswd=%s]",
+                user_id, user_name, user_pswd
+        );
     }
 
     public boolean insertUserAccount(DB db) {
@@ -100,8 +100,10 @@ public class UserAccount {
     }
 
     public boolean updateUserAccount(DB db) {
-        String sql = "select * from tb_user where user_name='"
-                + this.user_name + "'";
+        String sql = java.lang.String.format(
+                "select * from tb_user where user_name='%s'",
+                this.user_name
+        );
         ResultSet rs = db.getResultSet(sql);
 
         try {
@@ -112,9 +114,9 @@ public class UserAccount {
             e.printStackTrace();
         }
 
-        sql="update tb_user set "
-                + "user_pswd='" + this.user_pswd + "' "
-                + "where user_id=" + this.user_id;
+        sql = java.lang.String.format(
+                "update tb_user set user_pswd='%s' where user_id=%d",
+                this.user_pswd, this.user_id);
 
         return db.changeResultSet(sql);
     }
@@ -142,8 +144,10 @@ public class UserAccount {
     }
 
     public ArrayList<UserAccount> selectUserAccountByName(DB db){
-        String sql = "select * from tb_user where user_name="
-                + this.user_name;
+        String sql = java.lang.String.format(
+                "select * from tb_user where user_name=%s",
+                this.user_name
+        );
         ResultSet rs = db.getResultSet(sql);
 
         ArrayList<UserAccount> al = new ArrayList<UserAccount>();

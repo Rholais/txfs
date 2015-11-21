@@ -69,11 +69,11 @@ public class Exhibit {
 
     @Override
     public String toString() {
-        return "Exhibit[exb_id=" + this.exb_id
-                + ",exb_name=" + this.exb_name
-                + ",exb_imageaddr=" + this.exb_imageaddr
-                + ",exb_demo=" this.exb_demo
-                + "]";
+        return java.lang.String.format(
+                "Exhibit[exb_id=%d,exb_name=%s,exb_imageaddr=%s,exb_demo=%s]",
+                this.exb_id, this.exb_name, this.exb_imageaddr,
+                this.exb_demo
+        );
     }
 
     public boolean insertExhibit(DB db) {
@@ -101,8 +101,9 @@ public class Exhibit {
     }
 
     public ArrayList<Exhibit> selectExhibitById(DB db) {
-        String sql = "select * from tb_exb where exb_id="
-                + this.exb_id;
+        String sql = java.lang.String.format(
+                "select * from tb_exb where exb_id=%d",
+                this.exb_id);
         ResultSet rs = db.getResultSet(sql);
 
         ArrayList<Exhibit> al = new ArrayList<Exhibit>();
