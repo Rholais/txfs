@@ -78,18 +78,28 @@
                   type: 'json',
                   success:function(data){
                         if(data!=undefined){
-                              document.getElementById('img').src=data.img;
-                              $('#imgTitle').text(data.title);
-                              $('#con').text(data.con);
-                              $('#name1').text(data.list[0].owner);
-                              $('#plus1').text(data.list[0].plus);
-                              document.getElementById('audio1').src=data.list[0].mp3;
-                              $('#name2').text(data.list[1].owner);
-                              $('#plus2').text(data.list[1].plus);
-                              document.getElementById('audio2').src=data.list[1].mp3;
-                              $('#name3').text(data.list[2].owner);
-                              $('#plus3').text(data.list[2].plus);
-                              document.getElementById('audio3').src=data.list[2].mp3;
+                              document.getElementById('img').src=data.exb_imageaddr;
+                              $('#imgTitle').text(data.renran);
+                              $('#con').text(data.exb_demo);
+                              
+                              if(data.list.length>=3){
+                              
+                                    $('#name1').text(data.list[0].user_name);
+                                    $('#plus1').text(data.list[0].msg_plus);
+                                    $('#plus1').val(data.list[0].msg_id);
+                                    document.getElementById('audio1').src=data.list[0].msg_addr;
+                                    
+                                    $('#name2').text(data.list[1].user_name);
+                                    $('#plus2').text(data.list[1].msg_plus);
+                                    $('#plus2').val(data.list[1].msg_id);
+                                    document.getElementById('audio2').src=data.list[1].msg_addr;
+                                    
+                                    $('#name3').text(data.list[2].user_name);
+                                    $('#plus3').text(data.list[2].msg_plus);
+                                    $('#plus3').val(data.list[2].msg_id);
+                                    document.getElementById('audio3').src=data.list[2].msg_addr;
+                              
+                              }
                         }
                   }
             });
