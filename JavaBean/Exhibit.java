@@ -84,6 +84,13 @@ public class Exhibit {
         return  db.changeResultSet(sql);
     }
 
+    public boolean deleteExhibit(DB db) {
+        String sql = java.lang.String.format(
+                "delete from tb_exb where exb_id=%d", this.exb_id
+        );
+        return  db.changeResultSet(sql);
+    }
+
     public boolean updateExhibit(DB db) {
         String sql = java.lang.String.format(
                 "update tb_exb set exb_name='%s',exb_imageaddr='%s',exb_demo='%s' where exb_id=%d",

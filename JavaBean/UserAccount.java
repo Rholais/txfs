@@ -58,8 +58,10 @@ public class UserAccount {
     }
 
     public boolean insertUserAccount(DB db) {
-        String sql = "select * from tb_user where user_name='"
-                + this.user_name + "'";
+        String sql = java.lang.String.format(
+                "select * from tb_user where user_name='%s'",
+                this.user_name
+        );
         ResultSet rs = db.getResultSet(sql);
 
         try {
@@ -73,6 +75,27 @@ public class UserAccount {
         sql = java.lang.String.format(
                 "insert into tb_user (user_uame,user_pswd) value ('%s','%s')",
                 this.user_name, this.user_pswd );
+        return  db.changeResultSet(sql);
+    }
+
+    public boolean deleteUserAccount(DB db) {
+        String sql = java.lang.String.format(
+                "select * from tb_user where user_name='%s'",
+                this.user_name
+        );
+        ResultSet rs = db.getResultSet(sql);
+
+        try {
+            if(!rs.next()){
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        sql = java.lang.String.format(
+                "delete from tb_user where user_name='%s'",
+                this.user_name);
         return  db.changeResultSet(sql);
     }
 

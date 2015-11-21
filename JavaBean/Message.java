@@ -82,7 +82,14 @@ public class Message {
         );
         return  db.changeResultSet(sql);
     }
-    
+
+    public boolean deleteMessage(DB db) {
+        String sql = java.lang.String.format(
+                "delete from tb_msg where msg_id=%d", this.msg_id
+        );
+        return  db.changeResultSet(sql);
+    }
+
     public boolean updateMessage(DB db) {
         String sql = java.lang.String.format(
                 "update tb_msg set exb_id=%d,user_id=%d,user_name='%s',msg_time='%s',msg_addr='%s',msg_plus=%d where msg_id=%d",

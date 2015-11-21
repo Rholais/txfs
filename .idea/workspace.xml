@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bea3b214-5cbd-4d54-8595-45924fa50b51" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaBean/Exhibit.java" afterPath="$PROJECT_DIR$/JavaBean/Exhibit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaBean/Message.java" afterPath="$PROJECT_DIR$/JavaBean/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaBean/UserAccount.java" afterPath="$PROJECT_DIR$/JavaBean/UserAccount.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaBean/UserMessage.java" afterPath="$PROJECT_DIR$/JavaBean/UserMessage.java" />
     </list>
     <ignored path="txfs.iws" />
@@ -41,12 +43,12 @@
           <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/JavaBean/Message.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4696707">
-                  <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+                <state vertical-scroll-proportion="0.44020796">
+                  <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3746#3755#0" expanded="true" />
-                    <element signature="e#4516#4525#0" expanded="true" />
+                    <element signature="e#3955#3964#0" expanded="true" />
+                    <element signature="e#4725#4734#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -56,15 +58,25 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/JavaBean/UserAccount.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.392857">
-                  <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.7642981">
+                  <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
                   <folding>
-                    <element signature="e#2664#2677#0" expanded="true" />
-                    <element signature="e#3297#3310#0" expanded="true" />
+                    <element signature="e#3298#3311#0" expanded="true" />
+                    <element signature="e#3931#3944#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/JavaBean/DB.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-4.6034484">
+                  <caret line="60" column="38" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="38" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -72,23 +84,23 @@
           <file leaf-file-name="UserMessage.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/JavaBean/UserMessage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-14.75">
-                  <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
+                <state vertical-scroll-proportion="-8.678572">
+                  <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
                   <folding>
-                    <element signature="e#3544#3557#0" expanded="true" />
+                    <element signature="e#3783#3796#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Exhibit.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Exhibit.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/JavaBean/Exhibit.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5580589">
-                  <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+                <state vertical-scroll-proportion="-13.321428">
+                  <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#2672#2681#0" expanded="true" />
+                    <element signature="e#2885#2894#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -116,10 +128,10 @@
         <option value="$PROJECT_DIR$/sql/UserAccount.java" />
         <option value="$PROJECT_DIR$/sql/myaql.sql" />
         <option value="$PROJECT_DIR$/doc/tb.sql" />
-        <option value="$PROJECT_DIR$/JavaBean/UserAccount.java" />
         <option value="$PROJECT_DIR$/JavaBean/UserMessage.java" />
         <option value="$PROJECT_DIR$/JavaBean/Message.java" />
         <option value="$PROJECT_DIR$/JavaBean/Exhibit.java" />
+        <option value="$PROJECT_DIR$/JavaBean/UserAccount.java" />
       </list>
     </option>
   </component>
@@ -660,12 +672,12 @@
       <workItem from="1448009985692" duration="12905000" />
       <workItem from="1448035427889" duration="6176000" />
       <workItem from="1448070162359" duration="1761000" />
-      <workItem from="1448072210821" duration="6300000" />
+      <workItem from="1448072210821" duration="7858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27142000" />
+    <option name="totallyTimeSpent" value="28700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -725,46 +737,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaBean/UserAccount.java">
+    <entry file="file://$PROJECT_DIR$/JavaBean/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.392857">
-          <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
-          <folding>
-            <element signature="e#2664#2677#0" expanded="true" />
-            <element signature="e#3297#3310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaBean/UserMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.75">
-          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
-          <folding>
-            <element signature="e#3544#3557#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-4.6034484">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaBean/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4696707">
-          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.44020796">
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3746#3755#0" expanded="true" />
-            <element signature="e#4516#4525#0" expanded="true" />
+            <element signature="e#3955#3964#0" expanded="true" />
+            <element signature="e#4725#4734#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaBean/Exhibit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5580589">
-          <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+        <state vertical-scroll-proportion="-13.321428">
+          <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2672#2681#0" expanded="true" />
+            <element signature="e#2885#2894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaBean/UserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.678572">
+          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+          <folding>
+            <element signature="e#3783#3796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaBean/UserAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7642981">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding>
+            <element signature="e#3298#3311#0" expanded="true" />
+            <element signature="e#3931#3944#0" expanded="true" />
           </folding>
         </state>
       </provider>

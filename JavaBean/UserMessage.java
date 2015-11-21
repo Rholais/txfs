@@ -101,6 +101,14 @@ public class UserMessage {
         return  db.changeResultSet(sql);
     }
 
+    public boolean deleteUserMessage(DB db) {
+        Srting sql = java.lang.String.format(
+                "delete from tb_userMsg where user_id=%d",
+                this.user_id
+        );
+        return  db.changeResultSet(sql);
+    }
+
     public boolean updateUserMessage(DB db){
         String sql = java.lang.String.format(
                 "update tb_userMsg set user_sex='%s',user_birth='%s',user_email='%s',user_memo='%s' where user_id=%d",
