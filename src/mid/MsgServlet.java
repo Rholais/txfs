@@ -8,7 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
 import java.time.LocalDateTime;
 
 /**
@@ -29,8 +33,15 @@ public class MsgServlet extends HttpServlet {
         int exb_id = Integer.parseInt(request.getParameter("exb_id"));
         int user_id = Integer.parseInt(request.getParameter("user_id"));
         String user_name = request.getParameter("user_name");
-        LocalDateTime msg_time = LocalDateTime.parse(request.getParameter("msg_time"));
-        String msg_addr = request.getParameter("msg_addr");
+        LocalDateTime msg_time = LocalDateTime.parse(request.getParameter("time"));
+        Part filePart = request.getPart("file"); // Retrieves <input type="file" name="msg_file">
+        String msg_addr = filePart.getSubmittedFileName();
+        File uploads = new File("");
+        File file = new File(uploads, msg_addr);
+
+        try (InputStream fileContent = filePart.getInputStream()) {
+            Files.copy(fileContent, file.toPath());
+        }
         Message msg = new Message(exb_id, user_id, user_name,
                 msg_time, msg_addr, 0);
         DB db = new DB();
