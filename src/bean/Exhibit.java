@@ -21,6 +21,14 @@ public class Exhibit {
         this.exb_num = 0;
     }
 
+    public Exhibit(int exb_id) {
+        this.exb_id = exb_id;
+        this.exb_name = null;
+        this.exb_imageaddr = null;
+        this.exb_demo = null;
+        this.exb_num = 0;
+    }
+
     public Exhibit(String exb_name, String exb_imageaddr,
                    String exb_demo, int exb_num) {
         this.exb_id = 0;

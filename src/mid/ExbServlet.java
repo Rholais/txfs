@@ -26,5 +26,7 @@ public class ExbServlet extends javax.servlet.http.HttpServlet {
         response.setContentType("application/json");
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
+        String exb_id = request.getParameter("id");
+        Exhibit exb = new Exhibit(exb_id);
     }
 }

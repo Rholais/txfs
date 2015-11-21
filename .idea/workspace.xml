@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e2f4b65-b8f3-49f7-a989-01ca1e105dec" name="Default" comment="Create `ExbServlet`">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="6e2f4b65-b8f3-49f7-a989-01ca1e105dec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bean/Exhibit.java" afterPath="$PROJECT_DIR$/src/bean/Exhibit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mid/ExbServlet.java" afterPath="$PROJECT_DIR$/src/mid/ExbServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/txfs.iml" afterPath="$PROJECT_DIR$/txfs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
     </list>
     <ignored path="txfs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,13 +50,23 @@
       <file leaf-file-name="ExbServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mid/ExbServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70247936">
-              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.814876">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#195#196#0" expanded="true" />
                 <element signature="e#218#219#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exhibit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bean/Exhibit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,6 +100,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/bean/Exhibit.java" />
         <option value="$PROJECT_DIR$/src/mid/ExbServlet.java" />
       </list>
     </option>
@@ -668,7 +677,7 @@
       <created>1448096857504</created>
       <option name="number" value="Default" />
       <updated>1448096857504</updated>
-      <workItem from="1448096860785" duration="3353000" />
+      <workItem from="1448096860785" duration="4484000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Project">
       <created>1448097350357</created>
@@ -688,11 +697,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448099876565</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create `doGet` method for `ExbServlet`">
+      <created>1448100248824</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1448100248824</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3353000" />
+    <option name="totallyTimeSpent" value="4484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -731,7 +746,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Project" />
     <MESSAGE value="Create `ExbServlet`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create `ExbServlet`" />
+    <MESSAGE value="Create `doGet` method for `ExbServlet`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create `doGet` method for `ExbServlet`" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -766,10 +782,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Exhibit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mid/ExbServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70247936">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.814876">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#195#196#0" expanded="true" />
