@@ -26,6 +26,16 @@ public class Message {
         this.msg_plus = 0;
     }
 
+    public Message(int msg_id, int exb_id, int user_id) {
+        this.msg_id = msg_id;
+        this.exb_id = exb_id;
+        this.user_id = user_id;
+        this.user_name = null;
+        this.msg_time = LocalDateTime.now();
+        this.msg_addr = null;
+        this.msg_plus = 0;
+    }
+
     public Message(int exb_id, int user_id, String user_name,
                    LocalDateTime msg_time, String msg_addr, int msg_plus) {
         this.msg_id = 0;
