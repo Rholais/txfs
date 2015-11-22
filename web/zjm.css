@@ -1,94 +1,97 @@
 #image{
 
-	width: 100%;
-	height: 400px;
+	width: 135%;
+	height: 720px;
 	position: relative;
 	background-color: #ccc;
 }
 .top{
 	width: 100%;
-	height: 56px;
+	height: 320px;
 	position: relative;
 	background-color: #fff;
-	margin: 8px;
+	margin: 48px;
 }
 img{
 	width: 100%;
 	height: 100%;
 }
 audio{
-	width: 90%;
+	width: 100%;
 	height: 100%;
 }
 .tabDiv{
 	width:30%;
-	height: 20px;
+	height: 120px;
 	position: relative;
-	left: 52px;
-	font-size: 16px;
+	left: 320px;
+	font-size: 96px;
 	font-weight: 400;
 }
 .touxiang{	
-	width: 30px;
-	height: 30px;
+	width: 160px;
+	height: 160px;
 	position: relative;
-	top: 4px;
+	top: 24px;
 	background-color: #fff;
 }
 .recordDiv{
 	width: 90%;
-	height: 20px;
-	left: 45px;
+	height: 120px;
+	left: 240px;
 	/*right: -50px;*/
 	position: relative;
-	top:-16px;
+	top:-80px;
 	background-color: #fff;
 }
 .audioStart{
 	width:90%;
-	height: 30px;
-	top: -10px;
+	height: 160px;
+	top: -60px;
 	position: relative;
+	font-size: 96px;	
+	border-color: #F5436D;
+	background-color: #F5436D;
 }
 .name{
-	height: 16px;
+	height: 96px;
 	width: 100%;
 	position: relative;
-	left: 4px;
-	font-size: 14px;
+	left: 24px;
+	font-size: 72px;
 }
 .plus{
-	height: 16px;
-	width: 16px;
+	height: 72px;
+	width: 72px;
 	position: relative;
-	top:-24px;
-	left:8px;
+	top:-144px;
+	left:48px;
 	color: #fff;
 }
 
 #describe{
-	height: 60px;
+	height: 240px;
 	width: 100%;
 	position: relative;
-	top: -68px;
+	top: -300px;
 	background: #fff;
 	opacity:0.7;
-	padding: 4px
+	padding: 24px
 }
 
 #imgTitle{
-	height: 24px;
+	height: 144px;
 	width: 100%;
 	position: relative;
 	top: 0px;
-	left: 12px;
-	font-size: 20px;
+	left: 72px;
+	font-size: 120px;
 }
 #con{
-	height: 20px;
+	height: 120opx;
 	width: 100%;
 	position: relative;
-	top: 4px;
-	left: 12px;
-	font-size: 14px;
+	top: 24px;
+	left: 72px;
+	font-size: 96px;
 }

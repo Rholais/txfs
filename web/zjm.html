@@ -17,17 +17,17 @@
       <div id="image">
             <img src='img/pic (1).jpg' id='img'>
             <div id='describe'>
-                  <div id='imgTitle'>···</div>
-                  <div id='con'>············</div>
+                  <div id='imgTitle'>一只蛤</div>
+                  <div id='con'>本蛤曾与华莱士谈笑风生</div>
             </div>
       </div>
       
       <div class='tabDiv'>热门</div>
       <div id="top1" class='top'>
-            <div id='name1H' class='name'>用户··</div>
+            <div id='name1H' class='name'>齐鹏</div>
             <div id="touxiang1" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus1H'></div>
+                  <div class='plus' value='' id='plus1H'>24</div>
                   </img>
             </div>
             <div id="recordDiv1" class='recordDiv'>
@@ -36,10 +36,10 @@
             </div>
       </div>
       <div id="top2" class='top'>
-            <div id='name2H' class='name'>···</div>
+            <div id='name2H' class='name'>钟健</div>
             <div id="touxiang2" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus2H'></div>
+                  <div class='plus' value='' id='plus2H'>21</div>
                   </img>
             </div>
             <div id="recordDiv2" class='recordDiv'>
@@ -48,10 +48,10 @@
             </div>
       </div>
       <div id="top3" class='top'>
-            <div id='name3H' class='name'>···</div>
+            <div id='name3H' class='name'>赵婉婷</div>
             <div id="touxiang3" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus3H'></div>
+                  <div class='plus' value='' id='plus3H'>13</div>
                   </img>
             </div>
             <div id="recordDiv3" class='recordDiv'>
@@ -63,10 +63,10 @@
       
       <div class='tabDiv'>最新</div>
       <div id="top1" class='top'>
-            <div id='name1' class='name'>用户··</div>
+            <div id='name1' class='name'>Farewell</div>
             <div id="touxiang1" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus1'></div>
+                  <div class='plus' value='' id='plus1'>2</div>
                   </img>
             </div>
             <div id="recordDiv1" class='recordDiv'>
@@ -75,10 +75,10 @@
             </div>
       </div>
       <div id="top2" class='top'>
-            <div id='name2' class='name'>···</div>
+            <div id='name2' class='name'>马特</div>
             <div id="touxiang2" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus2'></div>
+                  <div class='plus' value='' id='plus2'>0</div>
                   </img>
             </div>
             <div id="recordDiv2" class='recordDiv'>
@@ -87,10 +87,10 @@
             </div>
       </div>
       <div id="top3" class='top'>
-            <div id='name3' class='name'>···</div>
+            <div id='name3' class='name'>卢燚</div>
             <div id="touxiang3" class='touxiang'>
                   <img src='img/heart.jpg'>
-                  <div class='plus' value='' id='plus3'></div>
+                  <div class='plus' value='' id='plus3'>3</div>
                   </img>
             </div>
             <div id="recordDiv3" class='recordDiv'>
@@ -141,6 +141,38 @@
                                     $('#plus3H').text(data.list[2].msg_plus);
                                     $('#plus3H').val(data.list[2].msg_id);
                                     document.getElementById('audio3H').src=data.list[2].msg_addr;
+                              }
+                        }
+                  }
+            });
+            $.ajax({
+                  url: '128.0.0.1:80/tttttttttttttttttttttttttttt?last=1&id='+id,//todo
+                  asnyc: false,
+                  type: 'json',
+                  success:function(data){
+                        if(data!=undefined){
+                              document.getElementById('img').src=data.exb_imageaddr;
+                              $('#imgTitle').text(data.renran);
+                              $('#con').text(data.exb_demo);
+                              
+                              if(data.list.length>=1){
+                              
+                                    $('#name1').text(data.list[0].user_name);
+                                    $('#plus1').text(data.list[0].msg_plus);
+                                    $('#plus1').val(data.list[0].msg_id);
+                                    document.getElementById('audio1').src=data.list[0].msg_addr;                              
+                              }
+                              if(data.list.length>=2){                                    
+                                    $('#name2').text(data.list[1].user_name);
+                                    $('#plus2').text(data.list[1].msg_plus);
+                                    $('#plus2').val(data.list[1].msg_id);
+                                    document.getElementById('audio2').src=data.list[1].msg_addr;                                    
+                              }
+                              if(data.list.length>=3){                              
+                                    $('#name3').text(data.list[2].user_name);
+                                    $('#plus3').text(data.list[2].msg_plus);
+                                    $('#plus3').val(data.list[2].msg_id);
+                                    document.getElementById('audio3').src=data.list[2].msg_addr;
                               }
                         }
                   }
